@@ -54,6 +54,14 @@ const config = {
         ],
       },
       {
+        test: /\.hbs$/,
+        loader: 'handlebars-loader',
+        options: {
+          knownHelpersOnly: false,
+          helperDirs: [path.join(__dirname, 'hbs-helpers')],
+        },
+      },
+      {
         test: /\.html$/,
         use: [
           {
@@ -81,12 +89,19 @@ const config = {
       },
     ]),
     new HtmlWebPackPlugin({
-      template: './src/index.html',
+      title: 'My awesome service',
+      template: './src/index.hbs',
       favicon: './public/icon.ico',
+      data: require('./data.json'),
       minify: !IS_DEV && {
         collapseWhitespace: true,
         preserveLineBreaks: true,
         removeComments: true,
+      },
+    }),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        handlebarsLoader: {},
       },
     }),
     new MiniCssExtractPlugin({
