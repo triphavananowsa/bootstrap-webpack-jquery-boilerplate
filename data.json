@@ -1,14 +1,23 @@
 {
-    "name": "Mac",
-    "lastname": "Arcia",
+    "home": "Home",
     "services": [
         {
-            "id": 1,
-            "name": "S1"
+            "id": "#services",
+            "name": "Services"
         },
         {
-            "id": 2,
-            "name": "S2"
+            "id": "#tours",
+            "name": "Tours"
+        }
+    ],
+    "toplinks": [
+        {
+            "id": "#fb",
+            "name": "Facebook"
+        },
+        {
+            "id": "#mail",
+            "name": "triphavananow@gmail.com"
         }
     ]
 }

@@ -1,3 +1,26 @@
 @import './carousel.css';
 
 // Your customize CSS
+.navbar-gray{
+    background: #F7F7F7;
+    padding: 0;
+}
+.navbar-top{
+    padding: 2rem 0;
+}
+.btn{
+    font-size: .8rem;
+    line-height: 1.5;
+    border-radius: 0rem;
+}
+.nav-link {
+font-size: .9rem;
+    color: black;
+    &:hover{
+        color: red;
+    }
+}
+.navbar-brand {
+margin-left: 1rem;
+    color: red;
+    font-weight: bolder;}
